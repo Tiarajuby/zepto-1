@@ -39,29 +39,3 @@
 .place-order .cart-total button{
     margin-top: 30px;
 }
-
-.payment-confirmation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh; /* Full viewport height to center vertically */
-    text-align: center; /* Center text horizontally */
-  }
-  
-  .payment-confirmation h2 {
-    font-size: 3rem;
-    color: green; /* Success color */
-  }
-  
-  .payment-confirmation p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  .payment-tick {
-    font-size: 3rem;
-    color: green; /* Success tick color */
-    margin-top: 20px;
-  }
-  
