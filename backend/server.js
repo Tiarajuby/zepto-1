@@ -14,10 +14,11 @@ const port = process.env.PORT || 4000;  // Use the port from Render in productio
 
 // Middleware
 app.use(cors({
-  origin: '*',  // Allow all origins
+  origin: '*',  // Allow all origins (you can specify frontend domain if needed)
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
-}));  // Allow all origins
+  credentials: true  // Allow credentials if needed
+}));
 
 app.use(express.json());
 
