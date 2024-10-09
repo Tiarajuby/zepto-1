@@ -15,7 +15,10 @@ const port = process.env.PORT || 4000;  // Use the port from Render in productio
 
 
 // Middleware
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://zepto-1-vvvu.vercel.app'  // Your frontend domain
+}));
 
 app.use(express.json());
 
