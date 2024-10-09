@@ -13,12 +13,12 @@ const app = express();
 const port = process.env.PORT || 4000;  // Use the port from Render in production
 
 // Middleware
-app.use(cors({
-  origin: '*',  // Allow all origins (you can specify frontend domain if needed)
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
-  credentials: true  // Allow credentials if needed
-}));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");  // Allow all origins
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(express.json());
 
