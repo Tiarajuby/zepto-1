@@ -13,12 +13,12 @@ const app = express();
 const port = process.env.PORT || 4000;  // Use the port from Render in production
 
 // Middleware
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");  // Allow all origins
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors({
+    origin: 'https://zepto-1-2akz.vercel.app', // Set to your frontend domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 app.use(express.json());
 
