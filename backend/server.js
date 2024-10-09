@@ -12,16 +12,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;  // Use the port from Render in production
 
-
-
 // Middleware
-app.use(cors({
-  origin: 'https://zepto-1-2akz.vercel.app'  // Vercel frontend URL
-}));
-
-app.get('/api/food/list', (req, res) => {
-  res.json({ /* your data */ });
-});
+app.use(cors());  // Allow all origins
 
 app.use(express.json());
 
@@ -39,6 +31,7 @@ app.get("/", (req, res) => {
     res.send("API working");
 });
 
+// Start server
 app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`);
 });
