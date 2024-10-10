@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = 'https://zepto-1-5.onrender.com';
+  const url = 'https://zepto-1-gykb.vercel.app';
 
   return (
     <div>
