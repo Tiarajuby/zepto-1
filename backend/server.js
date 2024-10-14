@@ -15,7 +15,8 @@ const port = process.env.PORT || 4000;  // Use the port from Render in productio
 // Set allowed origins
 const allowedOrigins = [
     process.env.CLIENT_URL, // For production
-    'http://localhost:3000' // Your deployed frontend URL
+    'http://localhost:3000', // For local development
+    'https://zepto-1-ywis.vercel.app' // Your new deployed frontend URL
 ];
 
 // Middleware
