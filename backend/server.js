@@ -16,7 +16,7 @@ const port = process.env.PORT || 4000;  // Use the port from Render in productio
 const allowedOrigins = [
     process.env.CLIENT_URL, // For production
     'http://localhost:3000', // For local development
-    'https://zepto-1-lclk.vercel.app/' // Your deployed frontend URL
+    'https://zepto-1-smnp.vercel.app' // Your deployed frontend URL
 ];
 
 // Middleware
@@ -51,5 +51,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(Server started on http://localhost:${port});
+    console.log(`Server started on http://localhost:${port}`);
 });
